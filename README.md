@@ -13,14 +13,18 @@
 2. 형상관리
 	- Remote Repository 생성(github)
 	- Local Repository 생성
-		>> dir /A > .gitignore
-		>> notepad .gitignore 편집
-		>> git init
-		>> git add *
-		>> git commit -m "first commit"
+		- >> git status
+		- >> git log
+		- >> dir /A > .gitignore
+		- >> notepad .gitignore 편집
+		- >> git init
+		- >> git add *
+		- >> git commit -m "first commit"
 	- Local ==> Remote push(최초 동기화)
-		>> git remote add origin https://github.com/webprotols/MosaicWeb.git
-		>> git push -u origin master
+		- >> git remote -v
+		- >> git remote remove origin
+		- >> git remote add origin https://github.com/webprotols/MosaicWeb.git
+		- >> git push -u origin master
 	
 	
 	
