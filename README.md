@@ -40,16 +40,32 @@
 	- Firefox ==> http://localhost:8080/Hello.html
 	
 4. JSP 설정
-compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'
-
 	- mvnrepository.com >> search : tomcat jasper
 	- build.gradle dependency : 
-		compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4' 
+		providedRuntime group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'
+	- Eclipse -> Gradle Refresh	
 	- notepad src/main/webapp/Hello.jsp
 	- gradle bootRun
-	- Firefox ==> http://localhost:8080/Hello.jsp		
+	- Firefox ==> http://localhost:8080/Hello.jsp	
 	
+5. Servlet 설정
+	- Project facets 추가
+		- >> Dynamic Web Module 3.1
+		- >> Java 1.8
+		- >> JavaScript 1.0
+	- MosaicWebApplication.java << @ServletComponentScan 추가
+	- com.hybrid.servlet.HelloServlet.java 생성
+	- gradle bootRun
+	- Firefox ==> http://localhost:8080/HelloServlet		
 	
+6. SpringLoaded 설정(리로드 기능)
+	- mvnrepository.com >> search : springloaded
+	- build.gradle에 설정(두 곳)
+		classpath("org.springframework:springloaded:1.2.6.RELEASE")
+		compile group: 'org.springframework', name: 'springloaded', version: '1.2.6.RELEASE'
+	- Elipse Output Directory 변경
+		bin ==> build/classes/main	
+		
 	
 	
 	
