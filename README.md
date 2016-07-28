@@ -37,7 +37,17 @@
 	- mkdir src/main/webapp 폴더 생성
 	- notepad src/main/webapp/Hello.html
 	- gradle bootRun
-	- Firefox ==> http://localhost:8080/Hello.html	
+	- Firefox ==> http://localhost:8080/Hello.html
+	
+4. JSP 설정
+compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'
+
+	- mvnrepository.com >> search : tomcat jasper
+	- build.gradle dependency : 
+		compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4' 
+	- notepad src/main/webapp/Hello.jsp
+	- gradle bootRun
+	- Firefox ==> http://localhost:8080/Hello.jsp		
 	
 	
 	
