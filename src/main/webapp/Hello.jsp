@@ -10,5 +10,7 @@
 <% for (int i=0; i<10; i++) { %>
 	<h1>Hello.jsp 실행 확인됨 i = <%= i %></h1>
 <% } %>
+
+${header.User-Agent}
 </body>
 </html>
